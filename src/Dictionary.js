@@ -29,6 +29,7 @@ export default function Dictionary() {
         />
         <input type="submit" value="Search" />
       </form>
+      <br />
       <Results results={results} />
     </div>
   );
