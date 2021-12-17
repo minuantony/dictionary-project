@@ -1,0 +1,18 @@
+.phonetics {
+  margin-bottom: 15px;
+}
+a {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px;
+  color: indigo;
+  text-decoration: none;
+  margin: 5px;
+}
+a:hover {
+  background-color: rgb(240, 123, 158);
+  color: white;
+}
+.text {
+  margin: 5px;
+}

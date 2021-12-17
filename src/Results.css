@@ -1,4 +1,9 @@
 .Results mark {
-  background-color: rgb(231, 227, 227);
   padding: 0px;
+}
+.Results section {
+  background-color: rgb(231, 227, 227);
+}
+h2 {
+  padding: 10px;
 }
