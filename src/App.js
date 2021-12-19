@@ -29,7 +29,7 @@ export default function App() {
         </a>{" "}
         and hosted on{" "}
         <a
-          href="https://unruffled-tereshkova-ec8cf0.netlify.app"
+          href="https://mystifying-clarke-13e206.netlify.app"
           target="_blank"
           rel="noreferrer"
         >
