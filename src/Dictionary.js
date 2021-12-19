@@ -6,14 +6,28 @@ import "./Dictionary.css";
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
+  let [photos, setPhotos] = useState(null);
 
-  function showResponse(response) {
+  function showDictionaryResponse(response) {
     console.log(response.data);
     setResults(response.data[0]);
   }
+  function showPixelsResponse(response) {
+    console.log("abc");
+    console.log(response);
+    setPhotos(response.data.photos);
+  }
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(showResponse);
+    axios.get(apiUrl).then(showDictionaryResponse);
+    let pixelsApiKey =
+      "563492ad6f91700001000001043db19c7f184526b44650aaf405bb8e";
+    let pixelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    axios
+      .get(pixelsApiUrl, {
+        headers: { Authorization: `Bearer ${pixelsApiKey}` },
+      })
+      .then(showPixelsResponse);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -25,6 +39,9 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <section>
+        <h5>
+          <strong>What word you want to look up?</strong>
+        </h5>
         <form onSubmit={handleSubmit}>
           <input
             type="search"
@@ -33,12 +50,10 @@ export default function Dictionary() {
             onChange={updateChange}
             className="search-form"
           />
-          <input type="submit" value="Search" />
         </form>
       </section>
-      <br />
 
-      <Results results={results} />
+      <Results results={results} photos={photos} />
     </div>
   );
 }

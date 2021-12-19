@@ -2,6 +2,7 @@ import React from "react";
 import "./Results.css";
 import Meanings from "./Meanings";
 import Phonetics from "./Phonetics";
+import Photos from "./Photos";
 
 export default function Results(props) {
   console.log(props.results);
@@ -32,6 +33,7 @@ export default function Results(props) {
             );
           })}
         </section>
+        <Photos photos={props.photos} keyword={props.keyword} />
       </div>
     );
   } else {

@@ -7,13 +7,35 @@ export default function App() {
       <header className="App-header">
         <h1>Dictionary App</h1>
       </header>
-      <main>
-        <Dictionary />
-      </main>
+
+      <Dictionary />
       <footer>
-        <small>
-          Coded by Minu Antony, open-sourced on Git-Hub and hosted in Netlify.
-        </small>
+        {" "}
+        This project was coded by{" "}
+        <a
+          href="https://www.linkedin.com/in/minu-antony-30806036"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Minu Antony
+        </a>{" "}
+        and is open-sourced on{" "}
+        <a
+          href="https://github.com/minuantony/react-weather-app-project"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>{" "}
+        and hosted on{" "}
+        <a
+          href="https://unruffled-tereshkova-ec8cf0.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Netlify
+        </a>
+        .
       </footer>
     </div>
   );

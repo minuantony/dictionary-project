@@ -1,21 +1,22 @@
 .App {
   text-align: center;
-  max-width: 700px;
-  margin: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
   background-color: white;
+  font-family: monospace;
 }
 
 .App-header {
   padding: 10px;
-
   color: black;
 }
 h1 {
   padding: 5px;
 }
-footer {
+.App footer {
   text-align: left;
-  padding-left: 30px;
-  margin-top: -30px;
-  font-size: smaller;
+  margin: 5px;
+  position: relative;
+  left: 7px;
+  font-size: 12px;
 }
